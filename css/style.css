@@ -4,3 +4,8 @@ form,
 input {
     margin: 10px;
 }
+
+body {
+    background-image: url("../images/background.png");
+    background-repeat: repeat;
+}

@@ -1,6 +1,6 @@
 
 // Initial array of cartoons for the buttons at the top of the page
-var topics = ["spongeBob squarePants", "rugrats", "the simpsons", "ren and stimpy", "tom and jerry", "adventure time", "adult swim", "family guy", "southpark", "hey arnold", "rick and morty", "robot chicken"];
+var topics = ["SpongeBob SquarePants", "Rugrats", "The Simpsons", "Ren and Stimpy", "Tom and Jerry", "Adventure Time", "Adult Swim", "Family Guy", "South Park", "Hey Arnold", "Rick and Morty", "Robot Chicken"];
 
 // Function that will display the JSON content for each button into the #cartoons div
 function displayCartoonInfo () {
