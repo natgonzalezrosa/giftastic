@@ -4,24 +4,47 @@
     <meta charset="utf-8">
     <title>Cartoontastic</title>
 
-    <!-- Custom CSS sheet -->
+    <!-- Bootstrap and CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"><!-- Custom CSS sheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <!-- Cartoon buttons -->
-    <div id ="cartoonButtons"></div>
+    <!-- Main Container -->
+    <div class="container">
 
-    <!-- Form that includes input text box and submit button -->
-    <form id="cartoon-form">
-        <label for="cartoon-input">Add a cartoon:</label>
-        <input type="text" id="cartoon-input">
-        <br>
-        <input id="addCartoon" type="submit" value="Submit">
-    </form>
+        <!-- First Row -->
+         <div class="row">
 
-    <!-- Contains where the cartoons will show up after hitting submit button-->
-    <div id="cartoons"></div>
+            <!-- Cartoon Buttons column -->
+            <div class="col-lg-12" id="cartoonButtons"></div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row">
+
+            <!-- Cartoon Form column -->
+            <div class="col-lg-12">
+
+                <!-- Form that includes input text box and submit button -->
+                <form id="cartoon-form">
+                    <label for="cartoon-input">Add a cartoon:</label>
+                    <input type="text" id="cartoon-input"> <input id="addCartoon" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="row">
+            
+            <!-- Cartoons column -->
+            <div class="col-lg-12">
+
+                <!-- Contains where the cartoons will show up after hitting submit button-->
+                <div id="cartoons"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery and Javascript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

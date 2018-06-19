@@ -1,14 +1,17 @@
 
 // Initial array of cartoons for the buttons at the top of the page
-var topics = ["SpongeBob SquarePants", "Rugrats", "The Simpsons", "Ren and Stimpy", "Tom and Jerry", "Adventure Time", "Adult Swim", "Family Guy", "South Park", "Hey Arnold", "Rick and Morty", "Robot Chicken"];
+var topics = ["SpongeBob SquarePants", "Rugrats", "The Simpsons", "Ren and Stimpy", "Tom and Jerry", "Adventure Time", "Rocko's Modern Life", "Adult Swim", "Family Guy", "South Park", "Hey Arnold", "Rick and Morty", "Doug", "Robot Chicken", "Archer", "Big Mouth", "Pokemon", "Ninja Turtles"];
 
 // Function that will display the JSON content for each button into the #cartoons div
 function displayCartoonInfo () {
 
+    // When displayCartoonInfo function is started, empties/clears the cartoon div
     $("#cartoons").empty();
 
+    // cartoon is assigned an attribute of "data-name"
     var cartoon = $(this).attr("data-name");
 
+    // Limit of GIFs returned is 10
     var limit = 10;
 
     // My queryURL for Giphy API using the API key provided
@@ -87,17 +90,25 @@ function renderButtons () {
     }
 }
 
+// Function for changing the gif from still to animated and vice versa
 function changeImage() {
 
+    // state variable is equal to the attribute "data-state" of the image
     var state = $(this).attr("data-state");
+
+    // animateImage variable is equal to the attribute "data-animate" of the image
     var animateImage = $(this).attr("data-animate");
+
+    // stillImage variable is equal to the attribute "data-still" of the image
     var stillImage = $(this).attr("data-still");
 
+    // if "data-state" attribute of the image is "still", source is animateImage and "data-state" is changed to animate
     if (state === "still") {
         $(this).attr("src", animateImage);
         $(this).attr("data-state", "animate");
     }
 
+    // if "data-state" attribute of the image is NOT "still", source is stillImage and "data-state" is changed to still
     else {
         $(this).attr("src", stillImage);
         $(this).attr("data-state", "still");
@@ -116,7 +127,8 @@ $("#addCartoon").on("click", function(event) {
 
     // Calls the renderButtons which will handle the processing of the topics array
     renderButtons();
-
+    
+    // After the renderButtons function is called, clear the input box
     $("#cartoon-input").val("");
 });
 

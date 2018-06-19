@@ -5,7 +5,64 @@ input {
     margin: 10px;
 }
 
+/* Style for the body */
 body {
     background-image: url("../images/background.png");
     background-repeat: repeat;
+    font-size: 16px;
+    font-style: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Style for buttons on top of the page */
+button, #addCartoon {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-style: bold;
+    padding: 5px;
+    background-color: #cce9f9;
+    border-width: 1px;
+    border-color: #0a0f24;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+/* Div where the cartoon buttons are held */
+#cartoonButtons {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Input box */
+#cartoon-input {
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+/* Style for gifs */
+.gif {
+    border-width: 2px;
+    border-color: #150f50;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Div that holds the cartoons */
+.holdCartoons {
+    margin: 0 auto;
+    float: left;
+}
+
+/* Cartoon form */
+#cartoon-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Paragraph that holds rating text */
+p {
+    margin: 10px;
+    text-align: center;
+    font-style: italic;
 }
