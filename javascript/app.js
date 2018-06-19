@@ -15,7 +15,7 @@ function displayCartoonInfo () {
     var limit = 10;
 
     // My queryURL for Giphy API using the API key provided
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + cartoon + "&limit=" + limit + "&api_key=f5vRa7rEx6OYgSYr44q3kDC0AAyxaXkF";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + cartoon + "&limit=" + limit + "&api_key=f5vRa7rEx6OYgSYr44q3kDC0AAyxaXkF";
 
     // Performing GET request to the Giphy API
     $.ajax({
