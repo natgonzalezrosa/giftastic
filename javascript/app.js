@@ -2,13 +2,13 @@
 // Initial array of cartoons for the buttons at the top of the page
 var topics = ["SpongeBob SquarePants", "Rugrats", "The Simpsons", "Ren and Stimpy", "Tom and Jerry", "Adventure Time", "Rocko's Modern Life", "Adult Swim", "Family Guy", "South Park", "Hey Arnold", "Rick and Morty", "Doug", "Robot Chicken", "Archer", "Big Mouth", "Pokemon", "Ninja Turtles"];
 
-// Function that will display the JSON content for each button into the #cartoons div
+// Function that will display the content from the Giphy API for each button into the #cartoons div
 function displayCartoonInfo () {
 
     // When displayCartoonInfo function is started, empties/clears the cartoon div
     $("#cartoons").empty();
 
-    // cartoon is assigned an attribute of "data-name"
+    // cartoon variable is assigned an attribute of "data-name"
     var cartoon = $(this).attr("data-name");
 
     // Limit of GIFs returned is 10
@@ -17,12 +17,13 @@ function displayCartoonInfo () {
     // My queryURL for Giphy API using the API key provided
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + cartoon + "&limit=" + limit + "&api_key=f5vRa7rEx6OYgSYr44q3kDC0AAyxaXkF";
 
-    // Performing GET request to the Giphy API and displaying the response in the #cartoons div as a JSON string
+    // Performing GET request to the Giphy API
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
 
+        // For loop to go gifs up until the limit is reached
         for (var j = 0; j < limit; j++) {
 
             // Creates a div to hold the cartoon
@@ -34,13 +35,13 @@ function displayCartoonInfo () {
             // Adds a src attribute to the image
             image.attr("src", response.data[j].images.fixed_height_still.url);
 
-            // Adds data-still attribute to the image
+            // Adds "data-still" attribute to the image
             image.attr("data-still", response.data[j].images.fixed_height_still.url);
 
-            // Adds data-animate attribute  to the image
+            // Adds "data-animate" attribute  to the image
             image.attr("data-animate", response.data[j].images.fixed_height.url);
 
-            // Adds data-state attribute to the image
+            // Adds "data-state" attribute to the image
             image.attr("data-state", "still");
 
             // Appends the image
@@ -115,7 +116,7 @@ function changeImage() {
     }
 }
 
-// This will handle events when the Add a cartoon button is clicked
+// This will handle events when the "Add a cartoon" button is clicked
 $("#addCartoon").on("click", function(event) {
     event.preventDefault();
 
